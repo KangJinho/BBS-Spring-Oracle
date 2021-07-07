@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 일반게시판 쿼리 Mapper -->
+<!-- 작성자 : 강진호 -->
+<!-- 작성일 : 2020-7-7 -->
+
+<mapper namespace="com.bbs.board.mapper.BoardMapper">
+	<!-- 게시판 리스트 : select -->
+	<select id="list">
+	select*from()
+		select rownum rnum,no, title, write, writeDate, hit
+		from(
+		select no, title, write, writeDate, hit
+		form board
+		order by no desc
+		)
+	)
+	where rnum between #{startRow} and #{endRow}
+	</select>
+
+
+</mapper>
