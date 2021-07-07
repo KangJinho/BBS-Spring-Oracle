@@ -5,7 +5,6 @@ import java.sql.Date;
 public class BoardVO {
 	private int no;
 	private String title;
-	private String content;
 	private String write;
 	private Date writeDate;
 	private String hit;
@@ -20,12 +19,6 @@ public class BoardVO {
 	}
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
 	}
 	public String getWrite() {
 		return write;
@@ -47,8 +40,9 @@ public class BoardVO {
 	}
 	@Override
 	public String toString() {
-		return "BoardVO [no=" + no + ", title=" + title + ", content=" + content + ", write=" + write + ", writeDate="
+		return "BoardVO [no=" + no + ", title=" + title + ", write=" + write + ", writeDate="
 				+ writeDate + ", hit=" + hit + "]";
 	}
 	
 }
+

@@ -10,7 +10,7 @@
 	<!-- 게시판 리스트 : select -->
 	<select id="list" resultType="com.bbs.board.vo.BoardVO">
 	select*from()
-		select rownum rnum,no, title, write, writeDate, hit
+		select rownum rnum, no, title, write, writeDate, hit
 		from(
 		select no, title, write, writeDate, hit
 		form board
