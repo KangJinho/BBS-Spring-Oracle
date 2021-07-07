@@ -9,16 +9,15 @@
 <mapper namespace="com.bbs.board.mapper.BoardMapper">
 	<!-- 게시판 리스트 : select -->
 	<select id="list" resultType="com.bbs.board.vo.BoardVO">
-	select*from()
+	select*from(
 		select rownum rnum, no, title, write, writeDate, hit
 		from(
-		select no, title, write, writeDate, hit
-		form board
-		order by no desc
+			select no, title, write, writeDate, hit
+			from board
+			order by no desc
 		)
 	)
 	where rnum between #{startRow} and #{endRow}
 	</select>
-
 
 </mapper>
